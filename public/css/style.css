@@ -80,6 +80,7 @@ body {
   font-size: 2rem;
   margin: 1rem 0;
   gap: 2rem;
+  text-transform: uppercase;
 }
 
 /* Horizontal line after note items */
