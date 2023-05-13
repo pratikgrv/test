@@ -1,0 +1,172 @@
+/* Global styles */
+:root {
+  /* Color variables */
+  --light-color: #f0f0f0;
+  --dark-color: #060606;
+  --bg-color-light: #f0f0f0;
+  --bg-color-dark: #121212;
+  --text-color-light: #333333;
+  --text-color-dark: #f5f5f5;
+}
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* List styles */
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Light mode */
+body {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Container for the home page */
+.home_page {
+  width: 80%;
+  max-width: 42rem;
+  margin: 1.5rem auto;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 2.0rem;
+  font-family: 'Sora', sans-serif;
+  font-weight: 900;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Title styles */
+.title_name {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Note item styles */
+.note_items {
+  font-family: 'Karantina', cursive;
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 1rem 0;
+  gap: 2rem;
+}
+
+/* Horizontal line after note items */
+.note_items:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+/* Toggle switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Toggle switch input styles */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Toggle switch slider styles */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+/* Toggle switch circle styles */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* Toggle switch checked state */
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+/* Toggle switch checked state for circle */
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+/* Round toggle switch */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* Round toggle switch circle */
+.slider.round:before {
+  border-radius: 50%;
+}
+/* not found page container */
+.notfound_container {
+  position: relative;
+  min-height: 100vh;
+}
+/* Not found page title */
+.notfound {
+  font-family: 'Space Mono', monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive breakpoints */
+
+@media (min-width: 800px) {
+
+  .note_items {
+
+    font-size: 3rem;
+  }
+}
