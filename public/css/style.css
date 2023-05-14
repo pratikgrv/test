@@ -87,7 +87,7 @@ body {
 .note_items:after {
   content: "";
   display: block;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--text-color-light);
 }
 
 /* Toggle switch styles */
