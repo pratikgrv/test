@@ -18,11 +18,20 @@
   box-sizing: border-box;
 }
 
+a:visited,
+a:active {
+  color: inherit;
+  /* or specify your desired color */
+  text-decoration: none;
+  /* remove underline if necessary */
+}
+
 /* List styles */
 a,
 li {
   list-style: none;
   text-decoration: none;
+
 }
 
 /* Light mode */
@@ -76,10 +85,10 @@ body {
 /* Note item styles */
 .note_items {
   font-family: 'Karantina', cursive;
-  font-weight: 300;
-  font-size: 2rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   margin: 1rem 0;
-  gap: 2rem;
   text-transform: uppercase;
 }
 
@@ -148,11 +157,13 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 /* not found page container */
 .notfound_container {
   position: relative;
   min-height: 100vh;
 }
+
 /* Not found page title */
 .notfound {
   font-family: 'Space Mono', monospace;
@@ -162,12 +173,49 @@ input:checked+.slider:before {
   transform: translate(-50%, -50%);
 }
 
+.note_items:hover {
+  color: #1765a4;
+  /* background-color: #dcdcdc; */
+}
+
+.post_title {
+  font-family: 'Karantina', cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
+
+}
+
+.post_title:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--text-color-light);
+}
+
+.post_content {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1rem;
+
+}
+
+
+
+
+
+
+
+
 /* Responsive breakpoints */
 
 @media (min-width: 800px) {
 
   .note_items {
 
+    font-size: 2rem;
+  }
+
+  .post_title {
+
     font-size: 3rem;
+
   }
 }

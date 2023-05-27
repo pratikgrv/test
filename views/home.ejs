@@ -1,65 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400&family=Poppins&family=Sora&family=Space+Mono&display=swap"
-        rel="stylesheet">
-    <title>Pratik Grv</title>
-</head>
-
-<body>
+<%- include("partials/header"); -%>
     <section class="home_page">
-        <header class="header">
-            <div class="heading">
-                Pratik Grv.
-            </div>
-            <nav class="navigation">
-                <div class="about_link">
-                    <a href="/about"> About</a>
-                </div>
-                <div class="about_link">
-                    <label class="switch">
-                        <input type="checkbox" id="dark-mode-toggle">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-            </nav>
-        </header>
         <main class="container">
             <div class="title_name">
-                Notes & Quotes:-
+                Blogs:-
             </div>
-            <div class="notes">
-                <div class="note_items">
-                    "NATION"
-                </div>
-                <div class="note_items">
-                    "YOU CAN'T GO BACK AND CHANGE THE BEGINNING,
-                    BUT YOU CAN START WHERE YOU ARE AND CHANGE THE ENDING"
-                </div>
-                <div class="note_items">
-                    "YOU ARE NOT UNIQUE UNTIL ....."
-                </div>
-            </div>
+
+            <% posts.forEach(function(post){ %>
+
+                <a href="/posts/<%=post._id%>">
+                    <div class="note_items">
+                        <%=post.title%>
+                    </div>
+                </a>
+
+                <% }) %>
         </main>
-        <footer>
-            <div class="footer_title">
-
-            </div>
-        </footer>
     </section>
-
-
-
     <script>
         const toggleSwitch = document.querySelector('#dark-mode-toggle');
 
@@ -72,7 +28,3 @@
         });
 
     </script>
-
-</body>
-
-</html>
