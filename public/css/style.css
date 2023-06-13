@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=IBM+Plex+Sans&family=Inter&family=Karantina:wght@300;400&family=Pacifico&family=Poppins&family=Sora&family=Space+Grotesk&family=Space+Mono&display=swap');
+
 /* Global styles */
 :root {
   /* Color variables */
@@ -65,7 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: 'Space Mono', monospace;
-  
+
 }
 
 /* Heading styles */
@@ -92,11 +94,12 @@ body {
 
 /* Note item styles */
 .note_items {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Courier Prime', monospace;
   font-size: 1.5rem;
   letter-spacing: 2px;
   margin: 1rem 0;
-  
+  color: #060606;
+
 }
 
 /* Horizontal line after note items */
@@ -106,11 +109,12 @@ body {
   border-bottom: 1px solid var(--text-color-light);
 }
 
-.delete button{
+.delete button {
   color: red;
   cursor: pointer;
   font-family: monospace;
 }
+
 /* Toggle switch styles */
 .switch {
   position: relative;
@@ -186,8 +190,11 @@ input:checked+.slider:before {
 }
 
 .note_items:hover {
-  color: #e0ca3c;
+  color: #42435e;
   /* background-color: #dcdcdc; */
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--text-color-light);
 }
 
 .post_title {
@@ -197,11 +204,7 @@ input:checked+.slider:before {
 
 }
 
-.post_title:after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid var(--text-color-light);
-}
+.post_title:after {}
 
 .post_content {
   font-family: 'Poppins', sans-serif;
@@ -220,10 +223,7 @@ input:checked+.slider:before {
 
 @media (min-width: 800px) {
 
-  .note_items {
-
-    
-  }
+  .note_items {}
 
   .post_title {
 
